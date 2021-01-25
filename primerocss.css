@@ -1,0 +1,367 @@
+:root {
+    --blanco: rgb(255, 255, 255);
+    --oscuro: rgba(0, 0, 0, 0.863);
+    --oscuro2: rgba(0, 0, 0, 0.212);
+    --primario: rgb(255, 208, 0);
+    --secundario: rgba(25, 113, 172, 0.788);
+    --secundario2:rgb(25, 113, 172);
+    --gris: rgb(87, 87, 87);
+    --gris2: rgb(87, 87, 87, 0.5);
+    --fondo: rgba(173, 151, 151, 0.2)
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: 16px;
+    background-image: linear-gradient(to top, var(--fondo) 0%, var(--blanco) 100%);
+}
+
+h1{ 
+    color:var(--oscuro);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    font-family: 'Syne Mono', monospace;
+    border: 0.1rem solid var(--oscuro2);
+}
+
+h1 span{
+    font-size: 1.9rem;
+}
+
+h2{
+    font-size: 2.8rem;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+h3{
+    font-size: 2.25rem;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+p{
+    font-size: 1.5rem;
+    font-family: 'Slabo 27px', serif;
+}
+
+.bgnav, .main, .formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+ 
+.contenedor{
+    max-width: 90rem;
+    margin: 0 auto 0 auto;
+}
+
+.bgnav {
+    background-color: var(--secundario);
+    /* position: fixed; */
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-family: 'Slabo 27px', serif;
+    font-style: oblique;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    padding: 0.5rem 48rem;
+}
+
+.navbar a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+@media (min-width: 480px) {
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar a{
+         padding: 0.5rem 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar a{
+        padding: 0.5rem 4.68rem;
+   }
+}
+
+@media (min-width: 3000px) {
+    .navbar a{
+        padding: 0.5rem 0.1px;
+   }
+}
+
+.titulo {text-transform: uppercase;}
+
+.imgportada{
+    background-image: url(../portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+
+.contenidoportada{
+    position: absolute;
+    background-color: var(--oscuro2);
+    height: 100%;
+    width: 100%;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidoportada h2, .contenidoportada p{
+    color: var(--blanco);
+}
+
+.contenidoportada p{
+    font-size: 2.1rem;
+}
+
+.ubicacion {
+    display: flex;
+}
+
+
+.botoncontactar{
+    background-color: var(--secundario2);
+    padding: 0.55rem 1.3rem;
+    border-radius: 12%;
+    font-family: 'Slabo 27px', serif;
+    font-style: oblique;
+    border: none;
+}
+
+@media (max-width: 468px) {
+    .botoncontactar {
+        width: 55%;
+        text-align: center;
+    }
+}
+
+
+.botoncontactar a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+
+.botoncontactar:hover{
+    background-color: var(--primario);
+}
+
+.botoncontactar a:hover{
+    color: var(--oscuro);
+}
+
+.main {
+   align-items: center;
+   border: solid;
+   border-color: rgba(0, 0, 0, 0.5);
+   border-radius: 10%;
+   margin-top: 2rem;
+   padding: 0 0 5rem 5rem;
+   background-color: var(--blanco);
+   box-shadow: 0.45rem 0.45rem var(--oscuro2);
+}
+
+
+@media (max-width: 468px) {
+    .main{
+        padding: 0 0 2.5rem 0.1rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+}
+
+.appmov {
+    width: 8rem;
+    display: grid;
+    grid-template-columns: 1rem 1rem;
+    justify-content: start;
+    align-items: center;
+    column-gap: 2.5rem;
+    background-color: var(--primario);
+    padding: 0.25rem 0.1rem 0.25rem 0;
+    margin: 0 45%;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) { 
+
+#appmov{
+    margin-right: 25%;
+}
+
+.iconos{
+    margin-left: 47%;
+}
+ } 
+
+.icon-tabler-palette, .icon-tabler-credit-card{
+    background-color: var(--primario);
+    padding: 1rem 1rem;
+    border-radius: 50%;
+}
+
+.icapp{
+    height: 70%;
+    width: auto;
+}
+
+@media (max-width: 480px){
+    .icon-tabler-palette, .icon-tabler-credit-card{
+        margin-left: 6%;
+    }    
+    
+    .appmov{
+    width: 8rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--primario);
+    padding: 0.25rem 0.1rem 0.25rem 0;
+    margin: 0 45%;
+    border-radius: 50%;
+    }
+
+    .icapp{
+        height: 75%;
+        width: auto;
+    }
+}
+
+@media (min-width: 468px){
+    .icon-tabler-palette, .icon-tabler-credit-card{
+        margin-left: 45%;
+    }    
+    
+    .appmov{
+    width: 8rem;
+    /* display: flex; */
+    justify-content: start;
+    align-items: center;
+    background-color: var(--primario);
+    padding: 0.25rem 0.1rem 0.25rem 0;
+    margin: 0 45%;
+    border-radius: 50%;
+    }
+
+    .icapp{
+        height: 75%;
+        width: auto;
+    }
+}
+
+.formulario{
+    background-color: var(--gris2);
+    width: min(72rem, 100%); /* Utiliza el valor mas pequeño ahorra media */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.form legend{
+    text-align: center;
+    color: var(--primario);
+    font-family: 'Nanum Pen Script', cursive;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+.campos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.campo input, .campo textarea{
+    font-family: 'Slabo 27px', serif;
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.enviar input{
+    width: 50%;
+    justify-content: center ;
+    align-items: center;
+    margin-left: 25%;
+    border-radius: 1.5rem;
+    color: var(--blanco);
+    font-family: 'Slabo 27px', serif;
+}
+
+.enviar input:hover{
+    color: var(--oscuro);
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+}
+
+.email{
+    grid-column: 1/3;
+}
+
+.textarea{
+    height: 15.5rem;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+label{
+    color: black;
+}
